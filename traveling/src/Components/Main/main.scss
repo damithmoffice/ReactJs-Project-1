@@ -1,0 +1,167 @@
+.main{
+    width: 100%;
+    padding-top: 10rem;
+
+    .secTitle{
+        .title{
+            position: relative;
+            width: max-content;
+            color: black;
+            margin: 1rem 1rem;
+            z-index: 2;
+            &::after{
+
+                position: absolute;
+                content: '';
+                background:none ;
+                height: 5px;
+                width: 120px;
+                right: 0;
+                bottom: 5px;
+                z-index: -1;
+            }
+        }
+
+    }
+    .secContent{
+        padding: 1rem;
+        justify-content:center ;
+        gap: 1.5em;
+
+        .singleDestination{
+            height: 100%;
+            display: grid;
+            row-gap: 10px;
+            
+            border-radius: 10px;
+            align-items: center;
+            background: rgb(209, 209, 209);
+            box-shadow: 0 2px 4px rgba($color: #727272, $alpha: 0.5);
+            overflow: hidden;
+            transition: 1s ease;
+            &:hover{
+                background: white;
+                box-shadow: 0 2px 4px rgba($color: #727272, $alpha: 0.8);
+            }
+            .imageDiv{
+                height: 180px;
+                width: 100%;
+                overflow: hidden;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 2s ease;
+                }
+                &:hover{
+                    img{
+                        transform:scale(1.1) ;
+                    }
+
+                }
+            }
+            .cardInfo{
+
+                padding: 1rem;
+
+                .destTitle{
+                    color: black;
+                    font-size: 1.25rem;
+                }
+                .countinent{
+                    gap: .5rem;
+
+                    .icon{
+                        color: black;
+                        font-size: 18px;
+
+                    }
+                    .name{
+
+                        color: black;
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+
+                }
+                
+                .fees{
+                    width: 100%;
+                    justify-content: space-between;
+                    border-top: 1.5px solid gray ;
+                    border-bottom: 1.5px solid gray ;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    .grade{
+                        
+                        color: black;
+                        max-width: 100px;
+                        line-height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                  
+
+                        small{
+                            text-align: center;
+                            background: rgb(235, 230, 230);
+                            border-radius: 100%;
+                            padding: 1px 10px;
+                            margin-left: 2px;
+                        }
+                        
+
+                    }
+                    .price{
+                        font-size: 2rem;
+                        padding-right: 1rem;
+                    }
+                }
+                .desc{
+                   font-size: 13px;
+                   color: #1d1d1d;
+                   font-weight: 400;
+
+
+                }
+                .btn{
+                    margin-top: 1rem;
+                    color: white;
+                    font-weight: 400;
+                    justify-content: space-between;
+                    gap:.5rem;
+
+                    .icon{
+                        align-self: center ;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+
+
+        }
+
+    }
+}
+@media screen and (min-width:500px) {
+    .main{
+        width: 100%;
+        padding-top: 5rem;
+        .secContent{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+}
+@media screen and (min-width:900px) {
+    .main{
+        width: 100%;
+        padding-top: 5rem;
+        .secContent{
+            grid-template-columns: repeat(3,1fr);
+           
+        }
+    }
+
+}
